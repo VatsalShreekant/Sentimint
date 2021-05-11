@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Resources</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:3000/images/news.png">
+
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+</head>
+<body>
+<h1> Mental Health Resources</h1>
+<p> Select Mental Health Resource from drop-down list:</p>
+<form method="post">
+    <label for = "mental health resource">Choose a Article:</label>
+       <select name="article_being_selected">
+            {{#each items}}
+                <option>{{this}}</option>
+            {{/each}}
+        </select>
+<input style = "color: white; cursor:pointer;" type="submit" name="submit" value="Select">
+</form>
+
+
+<br><br>
+
+<form>
+    <label></label>Selected Mental Health Article:</label><br><br>
+    <textarea id="yourTextArea" rows="5" cols="60">{{selected_item.text}}</textarea>
+</form>
+
+
+<h2>Mental Health Resource Submission</h2>
+<form method="post">
+    <label>Article Name:</label><br><br>
+    <input type="text" name="article_name"><br><br>
+    <label>Sentiment:</label><br><br>
+    <input type="text" name="sentiment_name"><br><br>
+    <label></label>Mental Health Resource Article:</label><br><br>
+    <textarea name="text_name" rows="5" cols="60"></textarea><br><br>
+    <input style = "color: white; cursor:pointer;" type="submit" name="submit" value="Add">
+</form>
+
+<button style = "color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;" onclick="window.location.href='/journal';">Back</button>         
+
+</body>
+</html>

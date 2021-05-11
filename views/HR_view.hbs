@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Resources</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:3000/images/news.png">
+
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+</head>
+<body>
+<h1> Shared Journals for, {{institution_name}}</h1>
+<p> Select User from drop-down list:</p>
+<form method="post">
+    <label for = "shared journals">Choose a User:</label>
+       <select name="user_being_selected">
+            {{#each items}}
+                <option>{{this}}</option>
+            {{/each}}
+        </select>
+<input style = "color: white; cursor:pointer;" type="submit" name="submit" value="Select">
+</form>
+<br>
+<br>
+<form method = "POST">
+    <label for="identification">Identification Number:</label>
+    <input type="text" id="identification" name="identification_number">
+    <input type="submit" name="submit" value="Submit Identification" style = "color: white; cursor:pointer;" >
+    <br><br>
+    <label>Shared Journals:</label>
+    <br><br>
+    <textarea id="selected_item" rows="5" cols="60">{{#each selected_item}}
+    {{this}}
+    {{/each}}       
+    </textarea>
+</form>
+<br>
+<form method="post">
+    <input style = "color: white; cursor:pointer;" type="submit" name="submit" value="Logout">
+</form>
+</body>
+</html>

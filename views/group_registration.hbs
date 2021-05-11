@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Registration</title>
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+</head>
+
+<h1>Group Register</h1>
+<body>
+<form method= "post">
+  <label for="institution_name">Institution Name:</label>
+  <input type="text" id="institution_name" name="institution_name">
+  <br>
+  <br>
+  <label for="institution_password">Password</label>
+  <input type="password" id="institution_password" name="institution_password"><br><br>
+  <br>
+  <input type="submit" style = "color: white; cursor:pointer;" name="register_institution" value="Register">
+</form>
+<hr>
+<button style = "color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;" onclick="window.location.href='/group_login';"> Back to Institution Login </button>
+
+</body>
+ 
+</html>

@@ -1,0 +1,34 @@
+<div>
+    <h1>Hello, {{username}} </h1>
+
+    <div class="postform">
+        <hr4> Add your journal entry here</hr4>
+        <hr>
+
+        <form action="/action_page.php">
+            <label for="Date">Today's date:</label>
+            <input type="date" id="tdate" name="tdate">
+        </form>
+
+        <label>Your Journal Entry:</label><br>
+        <textarea cols="80" rows="20" name="description"></textarea><br>
+
+        <label>Mood of the entry</label><br>
+        <input type="radio" name="action" value="joy"> Joy </input>
+        <input type="radio" name="action" value="Trust"> Trust </input>
+        <input type="radio" name="action" value="Fear"> Fear </input>
+        <input type="radio" name="action" value="Surprise"> Surprise </input>
+        <input type="radio" name="action" value="Sadness"> Sadness </input>
+        <input type="radio" name="action" value="Disgust"> Disgust </input>
+        <input type="radio" name="action" value="Anticipation"> Anticipation </input>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+        <hr>
+    </div>
+    <br>
+    <form method="post" action="logout">
+        <input type="submit" value="Log out">
+    </form>
+
+</div>

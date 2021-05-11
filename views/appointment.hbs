@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Journal</title>
+	<link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="http://localhost:3000/images/diary.png">
+
+</head>
+
+<script>
+
+	function passval() {
+		var text_selected = document.getElementById("therapist").value;
+		localStorage.setItem("ddvalue", text_selected);
+		return true;
+	}
+
+</script>
+
+<body>
+
+	<h2>Schedule your appointment, {{username}} </h2>
+
+	<form method="post">
+
+		<label for="event-name">Full Name</label>
+		<input name="Full_Name" type="text" class="form-control" id="event-name" placeholder="Name" required>
+		<br><br>
+
+		<label for="therapists">Choose a Therapist:</label>
+
+		<form action="views/payment.hbs">
+			<select name="Therapists_List" id="therapist">
+				<option name="Henry Defoe: $300" value="Henry Defoe: $300">Henry Defoe: $300</option>
+				<option name="Heather Palmer: $200" value="Heather Palmer: $200">Heather Palmer: $200</option>
+				<option name="Peter Griffith: $150" value="Peter Griffith: $150">Peter Griffith: $150</option>
+				<option name="Sarah Rafferty: $100" value="Sarah Rafferty: $100">Sarah Rafferty: $100</option>
+			</select>
+			<br><br>
+
+			<label for="date">Appointment Date:</label>
+			<input type="date" id="tdate" name="Appointment_Date" required>
+			<br><br>
+
+			<label for="appt">Appointment Time:</label>
+			<input type="time" id="appt" name="Appointment_Time" min="09:00" max="18:00" required>
+			<br><br>
+
+			<input onclick="passval ()"
+				style="color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;"
+				type="submit" name="submit" value="Schedule Appointment!">
+			<br>
+			<br>
+
+			<button
+				style="color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;"
+				onclick="window.location.href='/payment';">Proceed to Payment</button>
+
+		</form>
+
+		{{!-- <button
+			style="position: absolute; right: 100px;color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;"
+			onclick="window.location.href='/payment';">Proceed to Payment</button> --}}
+		<br>
+
+	</form>
+
+	<button
+		style="color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;"
+		onclick="window.location.href='/therapist';">Back</button>
+
+</body>
+
+</html>

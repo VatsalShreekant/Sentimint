@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+</head>
+
+<h1>Therapist Register</h1>
+
+<body>
+  <form method="post">
+    <label for="user_name">Username:</label>
+    <input type="text" id="therapist_username" name="therapist_username"><br><br>
+
+    <label for="first_name">First Name:</label>
+    <input type="text" id="therapist_first_name" name="therapist_first_name"><br><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="therapist_last_name" name="therapist_last_name"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="therapist_password" name="therapist_password"><br><br>
+
+    <label for="student_company">Company Name:</label>
+    <input type="text" id="therapist_company" name="therapist_company"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="therapist_email" name="therapist_email"><br><br>
+    <br>
+
+    <input style="color: white; cursor:pointer;" type="submit" name="register_submit" value="Register"
+      onclick="adminApprovalPending()">
+    <script>
+      function adminApprovalPending() {
+        alert("Please wait for admin approval");
+      }
+    </script>
+  </form>
+  <hr>
+  <button
+    style="color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;"
+    onclick="window.location.href='/login';"> Back to Login</button>
+
+</body>
+
+</html>

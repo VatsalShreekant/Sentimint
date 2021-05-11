@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="http://localhost:3000/images/diary.png">
+
+</head>
+    <button style = "position: absolute; right: 100px;color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;" onclick="window.location.href='/therapist';">List Therapists</button>         
+
+
+<body>
+
+    <h1>Journal Entries</h1>
+    <h2>Welcome, {{username}}! </h2>
+        <form method= "post">
+            <hr4> Retrieve Journal Entry Here:</hr4>
+            <br>
+            <br>
+            <label for="date">Today's date:</label>
+            <input type="date" id="tdate" name="journal_date">
+            <input style = "color: white; cursor:pointer;" type="submit" name ="submit" value="Retrieve Journal Entry">
+            <br><br>
+            <h4>Selected Journal Entry:</h4>
+            <br>
+            <textarea id="journal_text_area" rows="10" cols="80">{{journal_entry}}</textarea>
+            <br>
+            <br> 
+        </form>
+       
+        <form method ="post">
+            <h4>Your Journal Entry:</h4>
+            <br>
+            <textarea rows="10" cols="80" name="new_journal_entry"></textarea>
+            <br>
+            <br>
+            <input type="radio" name="share_journal" value="share_journal"> Share Your Journal </input>
+            <br>
+            <br>
+            <h4>Mood of the entry: </h4>
+            <br>
+            <input type="radio" name="sentiment_action" value="Joy"> Joy </input>
+            <input type="radio" name="sentiment_action" value="Trust"> Trust </input>
+            <input type="radio" name="sentiment_action" value="Fear"> Fear </input>
+            <input type="radio" name="sentiment_action" value="Surprise"> Surprise </input>
+            <input type="radio" name="sentiment_action" value="Sad"> Sad </input>
+            <input type="radio" name="sentiment_action" value="Disgust"> Disgust </input>
+            <input type="radio" name="sentiment_action" value="Anticipation"> Anticipation </input>
+            <br>
+            <br>
+            <h4>Most Appropriate Mental Health Resource:</h4>
+            <br>
+            <textarea id="mental_health_resource" rows="10" cols="80">{{#each mental_health_resource}}{{this}}{{/each}}</textarea>
+            <br>
+            <br>
+            <button style = "color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;" type="submit" name="submit" value="sentiment_select">Submit</button>
+            <br>
+            <br>
+        </form>
+        
+
+
+        <form method="post">
+            <input style = "color: white; cursor:pointer;" type="submit" name="submit" value="Logout">
+        </form>
+<br>
+<br>
+<button style = "color: white; padding:5px 15px; background: #6aa84f; border: none; cursor: pointer; -webkit-border-radius: 5px; border-radius: 10px;" onclick="window.location.href='/mental_health_resource';">Go to Mental Health Resources</button>         
+</body>
+</html>
+
