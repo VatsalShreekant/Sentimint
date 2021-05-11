@@ -1,4 +1,5 @@
 # Sentimint Web App
+
 <kbd>
 ![Capture](https://user-images.githubusercontent.com/32462270/117884304-75f9ee00-b27a-11eb-9285-14a5d4582ac5.PNG)
 </kbd>
